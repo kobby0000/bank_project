@@ -1,0 +1,84 @@
+:root {
+ --primary_color: #2178fc;
+ --dark_blue: #193C72;
+ --grey_color: #676767;
+ --light_green: #9ED824;
+ --transition: 400ms ease;
+ --box_shadow:  0px 2px 3px 3px rgba(33, 120, 252, 0.1);
+ --head_font: 3rem;
+--primary_font: 1.2rem;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.2;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.container {
+  max-width: 93%;
+  margin: auto;
+}
+
+.btn {
+  text-decoration: none;
+  border: none;
+  outline: 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition : opacity var(--transition);
+}
+
+.btn:hover,
+.btn:focus{
+  opacity: 0.8;
+}
+
+
+.btn_main {
+  text-decoration: none;
+  border: none;
+  outline: 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition : all var(--transition);
+  background: var(--dark_blue);
+  width: fit-content;
+}
+
+.btn_main:hover,
+.btn_main:focus{
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.blue_overlay{
+ position: absolute;
+ inset: 0;
+ z-index: 1;
+ background: linear-gradient(-40deg, rgba(33, 120, 252, 0.2) 0%, rgba(0, 130, 199, 0.7091211484593838) 58%, rgba(34, 57, 94, 1) 100%);
+}

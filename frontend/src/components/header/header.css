@@ -1,0 +1,221 @@
+#header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding: 0.75rem 0;
+  background: #fff;
+  box-shadow: var(--box_shadow);
+}
+
+#header .header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header .header_wrapper .left .header_logo {
+  display: block;
+  width: 250px;
+  color: #fff;
+}
+
+#header .header_wrapper .right {
+  position: relative;
+}
+
+#header .header_wrapper .right .nav_main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#header .header_wrapper .right ul li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+#header .header_wrapper .right ul li a {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--dark_blue);
+  transition: opacity var(--transition);
+}
+
+#header .header_wrapper .right ul li a:hover,
+#header .header_wrapper .right ul li a:focus {
+  opacity: 0.7;
+}
+
+#header .header_wrapper .nav_main .dropdown .drop_main {
+  list-style: none;
+  color: var(--dark_blue);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#header .header_wrapper .nav_main .dropdown .drop_main:hover,
+#header .header_wrapper .nav_main .dropdown .drop_main:focus {
+  opacity: 0.7;
+}
+
+#header .header_wrapper .right .login_btn {
+  background: var(--primary_color);
+  padding: 0.6rem 1.3rem;
+  border-radius: 100vw;
+  transition: background 400ms ease;
+  cursor: pointer;
+}
+
+#header .header_wrapper .right .login_btn:hover,
+#header .header_wrapper .right .login_btn:focus {
+  background: var(--light_green);
+}
+
+#header .header_wrapper .right .login_btn a {
+  font-size: var(--primary_font);
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+}
+
+#header .header_wrapper .right .content_parent {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  /* display: none; */
+  transition: height var(--transition);
+}
+
+#header .header_wrapper .right .content_parent.show {
+  display: block;
+  height: auto;
+  box-shadow: var(--box_shadow);
+}
+
+#header .header_wrapper .right .drop_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#header .header_wrapper .right .drop_main img {
+  display: block;
+  width: 15px;
+}
+
+#header .header_wrapper .right .nav_sub {
+  transform: translateY(-100%);
+  height: 100%;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  width: 800px;
+  height: 100%;
+  transition: transform var(--transition);
+}
+
+#header .header_wrapper .right .nav_sub.slide {
+  transform: translateY(0%);
+}
+
+/* #header .header_wrapper .right .nav_sub.show {
+  display: block;
+} */
+
+#header .header_wrapper .right .nav_sub li {
+  color: var(--grey_color);
+  margin: 0.7rem 0;
+}
+
+#header .header_wrapper .right .nav_sub a {
+  color: var(--grey_color);
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#header .header_wrapper .right .nav_sub .head {
+  font-weight: 700;
+}
+
+#header .header_wrapper .humburger {
+  display: none;
+}
+
+/* ======= MEDIA QUERIES =======*/
+
+/* ======= HUMBURGER MENU  (max-width: 850px) ======= */
+@media screen and (max-width: 850px) {
+  #header {
+    padding-bottom: 0;
+  }
+
+  #header .header_wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #header .header_wrapper .left {
+    align-self: flex-start;
+    margin-top: 1rem;
+  }
+
+  #header .header_wrapper .left .header_logo {
+    width: 200px;
+  }
+
+  #header .header_wrapper .right .nav_main {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 0;
+    overflow: hidden;
+    transition: height var(--transition);
+  }
+
+  #header .header_wrapper .right .nav_main.toggle {
+    height: 400px;
+  }
+
+  #header .header_wrapper .humburger {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 1.75rem;
+    right: 5%;
+  }
+
+  #header .header_wrapper .humburger .burger_line {
+    width: 30px;
+    height: 2px;
+    background: var(--primary_color);
+    margin: 0.5rem 0;
+  }
+
+  #header .header_wrapper .humburger.animate .burger_line:nth-child(1) {
+    transform: rotate(45deg) translate(50%);
+    transition: transform var(--transition);
+  }
+
+  #header .header_wrapper .humburger.animate .burger_line:nth-child(2) {
+    opacity: 0;
+  }
+
+  #header .header_wrapper .humburger.animate .burger_line:nth-child(3) {
+    transform: rotate(-45deg) translate(41%);
+    transition: transform var(--transition);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #header .header_wrapper .left .header_logo {
+    width: 170px;
+  }
+}
