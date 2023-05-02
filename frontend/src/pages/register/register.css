@@ -1,0 +1,56 @@
+
+#register .register_wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#register .register_wrapper .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+
+#register .register_wrapper .top .head {
+    font-size: 2rem;
+    color: var(--primary_color);
+}
+
+#register .register_wrapper .top p {
+    color: var(--grey_color);
+    font-size: var(--primary_font);
+    font-weight: 500;
+}
+
+#register .register_wrapper input{
+    display: block;
+    outline: 0;
+    border: 1px solid var(--grey_color);
+    border-radius: 5px;
+    font-size: var(--primary_font);
+    color: var(--grey_color);
+    padding: 1rem 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 250px;
+}
+
+#register .register_wrapper input:focus {
+    border: 1px solid var(--primary_color);
+}
+
+#register .register_wrapper .register_btn {
+    background: var(--primary_color);
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+#register .register_wrapper .register_btn:hover,
+#register .register_wrapper .register_btn:focus {
+background: var(--dark_blue);
+}

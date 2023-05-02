@@ -1,45 +1,74 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import "./header.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Navigate } from "react-router-dom";
 import navLogo from "../../assets/images/logo_blue.png";
 import arrowDown from "../../assets/images/arrow_blue.png";
+import { userContext } from "../../context/userContext";
 
 function Header() {
-  const [toggle,setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenTwo, setIsOpenTwo] = useState(false);
   const bankRef = useRef();
   const personalRef = useRef();
+  const {setUserInfo, userInfo} = useContext(userContext);
+  const [logourRedirct, setLogoutRedirect] = useState(false);
 
-  window.addEventListener("click" ,(e)=> {
+  useEffect(() => {
+    fetch("http://localhost:4000/profile", {
+      credentials: "include",
+    }).then((Response) => {
+      Response.json().then((userInfo) => {
+        setUserInfo(userInfo);
+      });
+    });
+  }, []);
+
+  window.addEventListener("click", (e) => {
     // console.log(e.target === bankRef.current)
-    if (e.target !== bankRef.current &&  e.target !== personalRef.current) {
+    if (e.target !== bankRef.current && e.target !== personalRef.current) {
       setIsOpen(false);
       setIsOpenTwo(false);
-    } 
-  } )
+    }
+  });
+
+  function logout() {
+    fetch("http://localhost:4000/logout", {
+      credentials: "include",
+      method: "POST",
+    });
+    setUserInfo(null);
+  }
+
+  const username = userInfo?.username;
+
+  if(logourRedirct) {
+    return<Navigate to={"/"}/>
+  }
 
   return (
     <div>
       <nav id="header">
         <div className="header_wrapper container">
-          <div onClick={()=> setToggle(!toggle)} className="left">
+          <div onClick={() => setToggle(!toggle)} className="left">
             <Link to="/">
               <img className="header_logo" src={navLogo} alt="header logo" />
             </Link>
           </div>
           <div className="right">
             <ul className={toggle ? "nav_main toggle" : "nav_main"}>
-              <li onClick={()=> setToggle(!toggle)} className="links">
+              <li onClick={() => setToggle(!toggle)} className="links">
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li onClick={()=> setToggle(!toggle)}>
+              <li onClick={() => setToggle(!toggle)}>
                 <NavLink to="/about">About Us</NavLink>
               </li>
               <li className="dropdown">
-                <span 
-                 ref={bankRef}
-                 onClick={() => setIsOpen(!isOpen)} className="drop_main">
+                <span
+                  ref={bankRef}
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="drop_main"
+                >
                   Banking
                   <div>
                     <img src={arrowDown} alt="" />
@@ -61,7 +90,7 @@ function Header() {
 
               <li className="dropdown">
                 <span
-                ref={personalRef}
+                  ref={personalRef}
                   onClick={() => setIsOpenTwo(!isOpenTwo)}
                   className="drop_main"
                 >
@@ -91,15 +120,23 @@ function Header() {
               </li>
 
               <li className="login_btn">
-                <Link to="/login">Login</Link>
+                {username && (
+                  <>
+                    <Link onClick={logout}>Logout</Link>
+                  </>
+                )}
+
+                {!username && (
+                  <>
+                    <Link to="/login">Login</Link>
+                  </>
+                )}
               </li>
             </ul>
           </div>
-          <div 
-          onClick={()=> setToggle(!toggle)} 
-          className={toggle 
-            ? "humburger animate" 
-          : "humburger"}
+          <div
+            onClick={() => setToggle(!toggle)}
+            className={toggle ? "humburger animate" : "humburger"}
           >
             <div className="burger_line"></div>
             <div className="burger_line"></div>

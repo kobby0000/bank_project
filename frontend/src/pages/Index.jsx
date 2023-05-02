@@ -6,3 +6,5 @@ export { default as Faq } from "./faq/Faq";
 export { default as Complaint } from "./complaint/Complaint";
 export { default as Contact } from "./contact/Contact";
 export { default as Login } from "./login/Login";
+export {default as Register} from "./register/Register";
+export {default as Profile} from "./profiile/Profile";

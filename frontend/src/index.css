@@ -38,6 +38,10 @@ code {
   margin: auto;
 }
 
+.text_center {
+  text-align: center;
+}
+
 .btn {
   text-decoration: none;
   border: none;
@@ -48,6 +52,7 @@ code {
   font-size: 1.2rem;
   font-weight: bold;
   transition : opacity var(--transition);
+  cursor: pointer;
 }
 
 .btn:hover,

@@ -1,6 +1,6 @@
-import React, { useEffect,useState} from "react";
+import React, { useContext, useEffect,useState} from "react";
 import "./home.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate} from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Autoplay } from "swiper";
@@ -13,24 +13,39 @@ import slideImage1 from "../../assets/images/teenager-carrying-young-girl-outdoo
 import slideImage2 from "../../assets/images/african-business-male-people-shaking-hands.jpg";
 import slideImage3 from "../../assets/images/business-team-planning-marketing-strategy.jpg";
 import slideImage4 from "../../assets/images/happy-family-with-savings-piggy-banks.jpg";
+import { userContext } from "../../context/userContext";
 
 function Home() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  function login(e) {
-    e.preventDefault();
-    fetch('http://locallhost:400/login', {
-      method: "POST",
-      body: JSON.stringify({username,password}),
-      header: {"Content-Type": "applocation/json"},
-    })
-  }
-
+  const [redirect, setRedirect] = useState(false);
+  const {setUserInfo} = useContext(userContext);
 
   useEffect(() => {
     AOS.init();
   }, []);
+
+  async function login(e) {
+    e.preventDefault();
+   const response = await fetch('http://localhost:4000/login', {
+      method: "POST",
+      body: JSON.stringify({username,password}),
+      headers: {"Content-Type": "application/json"},
+      credentials: "include",
+    });
+    if (response.ok) {
+      response.json().then(userInfo => {
+        setUserInfo(userInfo);
+        setRedirect(true);
+      })
+    } else {
+      alert("wrong credentials");
+    }
+  }
+
+  if (redirect) {
+    return <Navigate to={"/profile"} />
+  }
 
   return (
     <div>
@@ -116,7 +131,7 @@ function Home() {
 
             <label>Password</label>
             <input 
-            type="text" 
+            type="password" 
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             />

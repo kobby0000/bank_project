@@ -17,7 +17,9 @@ import {
   Complaint,
   Contact,
   Login,
-} from "./pages/Index"
+  Register,
+  Profile,
+} from "./pages/Index";
 
 //Layouts
 import RootLayout from "./Layouts/RootLayout";
@@ -33,7 +35,8 @@ const router = createBrowserRouter(
       <Route path="/complaints" element= {<Complaint />} />
       <Route path="/contact_us" element= {<Contact />} />
       <Route path="/login" element= {<Login />} />
-      {/* <Route path="/about" element= {<About />} /> */}
+      <Route path="/register" element= {<Register />} />
+      <Route path="/profile" element= {<Profile />} />
     </Route>
   )
 );
