@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import "./header.css";
-import { Link, NavLink, Navigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import navLogo from "../../assets/images/logo_blue.png";
 import arrowDown from "../../assets/images/arrow_blue.png";
 import { userContext } from "../../context/userContext";
@@ -11,14 +11,14 @@ function Header() {
   const [isOpenTwo, setIsOpenTwo] = useState(false);
   const bankRef = useRef();
   const personalRef = useRef();
-  const {setUserInfo, userInfo} = useContext(userContext);
-  const [logourRedirct, setLogoutRedirect] = useState(false);
+  // const [username, setUsername] = useState(ull);
+  const {userInfo, setUserInfo } = useContext(userContext);
 
   useEffect(() => {
     fetch("http://localhost:4000/profile", {
       credentials: "include",
-    }).then((Response) => {
-      Response.json().then((userInfo) => {
+    }).then((response) => {
+      response.json().then((userInfo) => {
         setUserInfo(userInfo);
       });
     });
@@ -41,10 +41,6 @@ function Header() {
   }
 
   const username = userInfo?.username;
-
-  if(logourRedirct) {
-    return<Navigate to={"/"}/>
-  }
 
   return (
     <div>
@@ -122,7 +118,7 @@ function Header() {
               <li className="login_btn">
                 {username && (
                   <>
-                    <Link onClick={logout}>Logout</Link>
+                    <Link to="/" onClick={logout}>Logout</Link>
                   </>
                 )}
 
