@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 try {
-await mongoose.connect("mongodb+srv://bank_login:90d01D4P5W08TjCC@cluster0.avlel7w.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://bank_login:90d01D4P5W08TjCC@cluster0.avlel7w.mongodb.net/?retryWrites=true&w=majority")
 } catch {
      // Connection failed, handle the error
   console.error('Failed to connect to MongoDB Atlas:', err);
