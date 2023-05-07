@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 
 const salt = bcrypt.genSaltSync(10);
-const secret = "ufdfhfkjkufujdjhdffuifjidijidki"; 
+const secret = process.env.JWT_SECRET; 
 const app = express();
 app.use(cors({credentials:true, origin:"http://localhost:3000"}));
 app.use(express.json());
