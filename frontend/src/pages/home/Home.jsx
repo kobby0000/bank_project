@@ -8,12 +8,22 @@ import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import { userContext } from "../../context/userContext";
 
+// images
 import slideImage1 from "../../assets/images/teenager-carrying-young-girl-outdoors.jpg";
 import slideImage2 from "../../assets/images/african-business-male-people-shaking-hands.jpg";
 import slideImage3 from "../../assets/images/business-team-planning-marketing-strategy.jpg";
 import slideImage4 from "../../assets/images/happy-family-with-savings-piggy-banks.jpg";
-import { userContext } from "../../context/userContext";
+import complaintImg from "../../assets/images/wpf_ask-question.png";
+import businessImg from "../../assets/images/tabler_businessplan.png";
+import personalImg from "../../assets/images/iconoir_home-sale.png";
+import supportImg from "../../assets/images/carbon_settings-view.png";
+import budgetImg from "../../assets/images/budget.png";
+import cardImg1 from "../../assets/images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg";
+
+import SquareCard from "../../components/squareCard/SquareCard";
+
 
 function Home() {
   const [username, setUsername] = useState("");
@@ -140,7 +150,84 @@ function Home() {
           </form>
         </div>
       </section>
-      <h1>home</h1>
+
+
+                        {/* SECTION: HOME_BOXES */}
+      <section id="home_boxes">
+        <div className="home_boxes_wrapper container">
+          <div className="card_wrapper">
+          <SquareCard 
+          title= "Business Banking"
+          src = {businessImg}
+          alt = "credit union business banking"
+          />
+          </div>
+
+          <div className="card_wrapper">
+          <SquareCard
+          title= "Personal Banking"
+          src = {personalImg}
+          alt = "credit union personal banking"
+          />
+          </div>
+
+          <div className="card_wrapper">
+          <SquareCard
+          title= "Support"
+          src = {supportImg}
+          alt = "credit union banking support or help"
+          />
+          </div>
+
+          <div className="card_wrapper">
+          <SquareCard
+          title= "Complaint"
+          src = {complaintImg}
+          alt = "credit union bank complaint "
+          />
+          </div>
+      
+        </div>
+      </section>
+
+                             {/* SECTION : HOME_HELP */}
+<sectiom id="home_help">
+  <div className="home_help_wrapper container">
+    <div className="top text_center">
+      <img src= {budgetImg} alt="" />
+      <p>Let’s Achieve  your financial stability together.</p>
+      <p>We can help <div className="line"></div></p>
+      <p>We will match you with a loan program that meet your financial need. In short term liquidity, by striving to make funds available to them within 24 hours of application.</p>
+    </div>
+
+    <div className="bottom">
+      <div className="card">
+        <img src={cardImg1} alt="" />
+        <div className="text">
+          <p>Annual Report</p>
+          <p>See our 2022 annual report and our Anniversary.</p>
+          <a className="btn_2 text_center" href="/">Learn More</a>
+        </div>
+      </div>
+      <div className="card">
+        <img src= {cardImg1} alt="" />
+        <div className="text">
+          <p>Paypal Scams</p>
+          <p>See our 2022 annual report and our Anniversary.</p>
+          <a className="btn_2 text_center" href="/">Learn More</a>
+        </div>
+      </div>
+      <div className="card">
+        <img src={cardImg1} alt="" />
+        <div className="text">
+          <p>Vision,  Mission, Core Values</p>
+          <p>See our 2022 annual report and our Anniversary.</p>
+          <a className="btn_2 text_center" href="/">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</sectiom>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 :root {
- --primary_color: #2178fc;
- --dark_blue: #193C72;
+ --primary_color: #2179fc;
+ --dark_blue: #193c72;
  --grey_color: #676767;
+ --light_gray: #dfe0e0;
  --light_green: #9ED824;
  --transition: 400ms ease;
  --box_shadow:  0px 2px 3px 3px rgba(33, 120, 252, 0.1);
@@ -25,6 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.2;
+  color: var(--grey_color);
 }
 
 code {
@@ -32,6 +34,14 @@ code {
     monospace;
 }
 
+p {
+  font-size: var(--primary_font);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
 
 .container {
   max-width: 93%;
@@ -86,4 +96,13 @@ code {
  inset: 0;
  z-index: 1;
  background: linear-gradient(-40deg, rgba(33, 120, 252, 0.2) 0%, rgba(0, 130, 199, 0.7091211484593838) 58%, rgba(34, 57, 94, 1) 100%);
+}
+
+.line {
+  width: 50px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--primary_color);
+  margin: auto;
+  margin-top: 5px;
 }
