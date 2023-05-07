@@ -58,6 +58,6 @@ app.post("/logout", (req, res) => {
     res.cookie("token", "").json('ok');
 })
 
-app.listen(4000, ()=> {
-    console.log('database connected and running on port 4000');
+app.listen(5000, ()=> {
+    console.log('database connected and running on port 5000');
 });

@@ -8,7 +8,7 @@ function Register() {
 
    async function registrationForm (e){
         e.preventDefault();
-    const  response = await fetch('https://slick-union-bank.onrender.com/register', {
+    const  response = await fetch('http://localhost:5000/register', {
             method: "POST",
             body: JSON.stringify({username,password}),
             headers: {"Content-Type": "application/json"},
