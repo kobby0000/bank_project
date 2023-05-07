@@ -30,7 +30,8 @@ app.post("/register", async(req,res) => {
 
 app.post("/login", async (req, res) => { 
     const {username, password} = req.body;
-    const userDoc = await user.findOne({username});
+    const userDoc = await user.findOne({username})
+    .then((userDoc) => {
     const passValid = bcrypt.compareSync(password, userDoc.password);
     if (passValid) {
         //logged in
@@ -40,11 +41,15 @@ app.post("/login", async (req, res) => {
                 id:userDoc._id,
                 username,
             });
-        })
+        });
     } else {
         res.status(400).json('wrong credentioals');
     }
-} )
+})
+.catch((err) => {
+    res.status(400).json(err);
+  });
+});
 
 app.get("/profile", (req,res) => {
     const { token = null } = req.cookies;
