@@ -15,7 +15,7 @@ function Header() {
   const {userInfo, setUserInfo } = useContext(userContext);
 
   useEffect(() => {
-    fetch("https://slick-union-bank.onrender.com/profile", {
+    fetch("http://localhost:5000/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
