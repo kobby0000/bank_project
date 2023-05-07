@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const cors = require('cors');
 const mongoose = require("mongoose");
 const user = require("./modules/User");
@@ -12,13 +13,6 @@ const app = express();
 app.use(cors({credentials:true, origin:"http://localhost:3000"}));
 app.use(express.json());
 app.use(cookieParser());
-
-try {
-mongoose.connect("mongodb+srv://bank_login:90d01D4P5W08TjCC@cluster0.avlel7w.mongodb.net/?retryWrites=true&w=majority")
-} catch {
-     // Connection failed, handle the error
-  console.error('Failed to connect to MongoDB Atlas:', err);
-}
 
 
 app.post("/register", async(req,res) => {
@@ -69,6 +63,15 @@ app.post("/logout", (req, res) => {
     res.cookie("token", "").json('ok');
 })
 
-app.listen(5000, ()=> {
-    console.log('database connected and running on port 5000');
+
+// Cconnet to DB
+mongoose.connect(process.env.MONGO_URI)
+.then(() => {
+    //Listerning on a request
+    app.listen(process.env.PORT, ()=> {
+    console.log('database connected and running on port', process.env.PORT);
 });
+})
+.catch((error) => {
+    console.log(error)
+})
