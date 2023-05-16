@@ -22,7 +22,7 @@ function Header() {
         setUserInfo(userInfo);
       });
     });
-  }, []);
+  }, [setUserInfo]);
 
   window.addEventListener("click", (e) => {
     // console.log(e.target === bankRef.current)
