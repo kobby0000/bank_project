@@ -15,7 +15,7 @@ function Header() {
   const {userInfo, setUserInfo } = useContext(userContext);
 
   useEffect(() => {
-    fetch("http://localhost:4000/profile", {
+    fetch("https://slick-union-bank.onrender.com/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -33,7 +33,7 @@ function Header() {
   });
 
   function logout() {
-    fetch("http://localhost:4000/logout", {
+    fetch("https://slick-union-bank.onrender.com/logout", {
       credentials: "include",
       method: "POST",
     });
