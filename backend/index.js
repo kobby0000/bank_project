@@ -6,11 +6,11 @@ const user = require("./modules/User");
 const bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
-
+ 
 const salt = bcrypt.genSaltSync(10);
 const secret = process.env.JWT_SECRET; 
 const app = express();
-app.use(cors({credentials:true, origin:"http://localhost:3000"}));
+app.use(cors({credentials:true, origin:"https://calm-salmiakki-706c96.netlify.app"}));
 app.use(express.json());
 app.use(cookieParser());
 
