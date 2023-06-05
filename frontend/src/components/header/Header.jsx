@@ -15,7 +15,7 @@ function Header() {
   const {userInfo, setUserInfo } = useContext(userContext);
 
   useEffect(() => {
-    fetch("https://calm-salmiakki-706c96.netlify.app/profile", {
+    fetch("https://slick-union-bank.onrender.com/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -138,6 +138,7 @@ function Header() {
 
                 {!username && (
                   <li 
+                  onClick={() => setToggle(!toggle)} 
                   className="login_btn"
                   >
                     <Link to="/">Login</Link>
