@@ -28,13 +28,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 #header .header_wrapper .right ul li {
   list-style: none;
   color: #fff;
-  font-size: 1.1rem;
 }
 
 #header .header_wrapper .right ul li a {
@@ -42,6 +41,7 @@
   text-decoration: none;
   color: var(--dark_blue);
   transition: opacity var(--transition);
+  font-size: 1rem;
 }
 
 #header .header_wrapper .right ul li a:hover,
@@ -64,7 +64,7 @@
 
 #header .header_wrapper .right .login_btn {
   background: var(--primary_color);
-  padding: 0.6rem 1.3rem;
+  padding: 0.5rem 1rem;
   border-radius: 100vw;
   transition: background 400ms ease;
   cursor: pointer;
@@ -76,7 +76,7 @@
 }
 
 #header .header_wrapper .right .login_btn a {
-  font-size: var(--primary_font);
+  font-size: 1rem;
   color: #fff;
   text-transform: uppercase;
   width: 100%;

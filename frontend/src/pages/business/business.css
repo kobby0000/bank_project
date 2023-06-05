@@ -1,0 +1,104 @@
+#business_showcase .business_showcase_wrapper {
+    background: url('../../assets/images/business-team-planning-marketing-strategy.jpg')no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#business_showcase .business_showcase_wrapper h1 {
+    font-size: var(--head_font);
+    color: var(--dark_blue);
+}
+
+/* ======= SECTION : BUSINESS_WELCOME =======  */
+#business_welcome {
+    margin: 5rem 0;
+}
+
+#business_welcome .business_welcome_wrapper .top p {
+    padding: 0.5rem;
+}
+
+#business_welcome .business_welcome_wrapper .top p:first-child {
+    font-size: var(--head_font2);
+    color: var(--primary_color);
+}
+
+#business_welcome .business_welcome_wrapper .top p:nth-child(2) {
+    font-size: var(--head_font2);
+    color: var(--dark_blue);
+}
+
+#business_welcome .business_welcome_wrapper .top p:last-child {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+#business_welcome .business_welcome_wrapper .bottom {
+    background: url("../../assets//images/3386851.jpg")no-repeat center center/cover;
+    margin: 5rem 0;
+    padding: 4rem 0;
+}
+
+#business_welcome .business_welcome_wrapper .bottom .title {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+#business_welcome .business_welcome_wrapper .bottom .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+#business_welcome .business_welcome_wrapper .bottom .cards div {
+    width: 100%;
+}
+
+#business_welcome .business_welcome_wrapper .bottom #card_two {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(25px);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    min-height: 170px;
+}
+
+
+#business_welcome .business_welcome_wrapper .bottom  #card_two img {
+    width: 40px;
+}
+
+#business_welcome .business_welcome_wrapper .bottom  #card_two p:nth-child(2) {
+    font-weight: bold;
+}
+
+
+
+                    /* ======= MEDIA QUERIES ======= */
+
+@media screen and (max-width: 850px) {
+    
+/* ======= SECTION : BUSINESS_WELCOME =======  */
+#business_welcome .business_welcome_wrapper .bottom .cards {
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+@media screen and (max-width: 600px) {
+    /* ======= SECTION : BUSINESS_WELCOME =======  */
+#business_welcome .business_welcome_wrapper .bottom .cards {
+    grid-template-columns: 1fr;
+}
+
+#business_welcome .business_welcome_wrapper .bottom  #card_two {
+    padding: 2rem;
+}
+}

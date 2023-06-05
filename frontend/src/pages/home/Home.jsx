@@ -12,17 +12,25 @@ import { userContext } from "../../context/userContext";
 
 // images
 import slideImage1 from "../../assets/images/teenager-carrying-young-girl-outdoors.jpg";
-import slideImage2 from "../../assets/images/african-business-male-people-shaking-hands.jpg";
-import slideImage3 from "../../assets/images/business-team-planning-marketing-strategy.jpg";
+import slideImage2 from "../../assets/images/businessteam.jpg";
+import slideImage3 from "../../assets/images/loan.jpg";
 import slideImage4 from "../../assets/images/happy-family-with-savings-piggy-banks.jpg";
 import complaintImg from "../../assets/images/wpf_ask-question.png";
-import businessImg from "../../assets/images/tabler_businessplan.png";
-import personalImg from "../../assets/images/iconoir_home-sale.png";
+import businessImg from "../../assets/images/homeIcon_white.png";
+import personalImg from "../../assets/images/bankingIcon_white.png";
 import supportImg from "../../assets/images/carbon_settings-view.png";
 import budgetImg from "../../assets/images/budget.png";
 import cardImg1 from "../../assets/images/confident-african-businesswoman-smiling-closeup-portrait-jobs-career-campaign.jpg";
+import bankIcon from "../../assets/images/bankingIcon.png";
+import homeIcon from "../../assets/images/homeIcon.png";
+import chartIcon from "../../assets/images/chart.png";
+import tombIcon from "../../assets/images/tomb.png";
+import fundsIcon from "../../assets/images/funds.png";
+import loanCardImage from "../../assets/images/loan_card.png";
 
 import SquareCard from "../../components/squareCard/SquareCard";
+import CardTwo from "../../components/cardTwo/CardTwo";
+import ScrollToTop from "../../components/scollToTop/ScrollToTop";
 
 
 function Home() {
@@ -88,7 +96,7 @@ function Home() {
                 <div>
           <div className="blue_overlay"></div>
 
-                  <img src={slideImage1} alt="side_image" />
+                  <img className="first_slide_image" src={slideImage1} alt="side_image" />
                 </div>
               </SwiperSlide>
               <SwiperSlide>
@@ -191,7 +199,7 @@ function Home() {
       </section>
 
                              {/* SECTION : HOME_HELP */}
-<sectiom id="home_help">
+<section id="home_help">
   <div className="home_help_wrapper container">
     <div className="top text_center">
       <img src= {budgetImg} alt="" />
@@ -201,7 +209,12 @@ function Home() {
     </div>
 
     <div className="bottom">
-      <div className="card">
+      <div 
+       data-aos="fade-up"
+       data-aos-easing="ease-in"
+       data-aos-duration="700"
+      className="card"
+      >
         <img src={cardImg1} alt="" />
         <div className="text">
           <p>Annual Report</p>
@@ -209,7 +222,12 @@ function Home() {
           <a className="btn_2 text_center" href="/">Learn More</a>
         </div>
       </div>
-      <div className="card">
+      <div 
+      data-aos="fade-up"
+      data-aos-easing="ease-in"
+      data-aos-duration="900"
+      className="card"
+      >
         <img src= {cardImg1} alt="" />
         <div className="text">
           <p>Paypal Scams</p>
@@ -217,7 +235,12 @@ function Home() {
           <a className="btn_2 text_center" href="/">Learn More</a>
         </div>
       </div>
-      <div className="card">
+      <div 
+      data-aos="fade-up"
+      data-aos-easing="ease-in"
+      data-aos-duration="1100"
+      className="card"
+      >
         <img src={cardImg1} alt="" />
         <div className="text">
           <p>Vision,  Mission, Core Values</p>
@@ -227,7 +250,266 @@ function Home() {
       </div>
     </div>
   </div>
-</sectiom>
+</section>
+
+{/* ======= SECTION:PARTNERING ======= */}
+<section id="partnering">
+  <div className="partnering_wrapper">
+    <div className="top text_center container">
+      <p className="head">Partnering businesses reach their full Potential.</p>
+      <p className="head">We have the experience</p>
+      <div className="line"></div>
+      <p>We will match you with a loan program that meet your financial need. In short term liquidity, by striving to.</p>
+    </div>
+
+    <div className="bottom">
+      <div className="card_box">
+      <div className="home_business">
+        <p 
+        data-aos="zoom-in"
+        data-aos-easing="ease-in"
+        data-aos-duration="800"
+        className="partnering_title"
+        >
+          Business Banking
+          </p>
+        <div className="partnering_cards">
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+          >
+          <CardTwo
+          src={bankIcon}
+          alt="sick union personal banking icon"
+          title="Fixed Deposits"
+          text="hat meet yourrm liquidity, by striving to  liquidity, by ."
+          />
+          </div>
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+          >
+          <CardTwo
+          src={bankIcon}
+          alt="sick union personal banking icon"
+          title="Multiple Accounts"
+          text="hat meet yourrm liquidity, by striving to  liquidity, by ."
+          />
+          </div>
+
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+          >
+          <CardTwo
+          src={bankIcon}
+          alt="sick union personal banking icon"
+          title="Bonds & Guarantees"
+          text="hat meet yourrm liquidity, by striving to  liquidity, by ."
+          />
+          </div>
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+          >
+          <CardTwo
+          src={bankIcon}
+          alt="sick union personal banking icon"
+          title="Letter of Credit"
+          text="hat meet yourrm liquidity, by striving to  liquidity, by ."
+          />
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div className="home_personal">
+        <div className="card_box">
+      <div className="home_business">
+        <p 
+        className="partnering_title"
+        data-aos="zoom-in"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+        >
+          personal Banking
+          </p>
+        <div className="partnering_cards">
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+          >
+          <CardTwo
+          src={homeIcon}
+          alt="sick union personal banking icon"
+          title="Fixed Deposits"
+          text="hat meet yourrm liquidity, by striving to  liquidity, by ."
+          />
+          </div>
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+          >
+          <CardTwo
+          src={homeIcon}
+          alt="sick union personal banking icon"
+          title="Multiple Accounts"
+          text="hat meet yourrm liquidity, by striving to  liquidity, by ."
+          />
+          </div>
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+          >
+          <CardTwo
+          src={homeIcon}
+          alt="sick union personal banking icon"
+          title="Bonds & Guarantees"
+          text="hat meet yourrm liquidity, by striving to  liquidity, by ."
+          />
+          </div>
+          <div
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="800"
+          >
+          <CardTwo
+          src={homeIcon}
+          alt="sick union personal banking icon"
+          title="Letter of Credit"
+          text="hat meet yourrm liquidity, by striving to  liquidity, by ."
+          />
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{/* ======= SECTION : LOAN ======= */}
+<section id="home_loan">
+  <div className="home_loan_wrapper container">
+    <div className="top">
+      <p className="heading">Our Loan Acquisition Process.</p>
+<div className="line_two"></div>
+      <p>Summary of getting a loan at  Slick Union Bank.</p>
+    </div>
+
+    <div className="bottom">
+    <div className="left">
+      <div className="process">
+        <div className="icon">
+          <div
+          data-aos="zoom-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="600"
+          data-aos-anchor-placement="top-bottom"
+          >
+          <img src={chartIcon} alt="" />
+          </div>
+          <div 
+          data-aos="zoom-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="600"
+          data-aos-anchor-placement="top-bottom"
+          className="rod"
+          ></div>
+        </div>
+        <div className="description">
+          <p 
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="700" 
+          data-aos-anchor-placement="top-bottom"
+          >Check Loan Rate</p>
+          <p
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="900"
+          data-aos-anchor-placement="top-bottom"
+          >Select amount and the rate associated with it.</p>
+        </div>
+      </div>
+      <div className="process">
+        <div className="icon">
+          <div
+          data-aos="zoom-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="600"
+          >
+          <img src={tombIcon} alt="" />
+          </div>
+          <div
+          data-aos="zoom-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="600"
+          className="rod_two"
+          ></div>
+        </div>
+        <div className="description">
+          <p
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="700"
+          data-aos-anchor-placement="top-bottom"
+          >Choose Loan Offer</p>
+          <p
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="900"
+          data-aos-anchor-placement="top-bottom"
+          >Choose an offer that best works for you.</p>
+        </div>
+      </div>
+      <div className="process">
+        <div className="icon">
+          <div 
+          data-aos="zoom-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="700"
+          data-aos-anchor-placement="top-bottom"
+          >
+          <img src={fundsIcon} alt="" />
+          </div>
+        </div>
+        <div className="description">
+          <p
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="700"
+          data-aos-anchor-placement="top-bottom"
+          >Get Your Funds</p>
+          <p
+          data-aos="fade-up"
+          data-aos-easing="ease-in"
+          data-aos-duration="900"
+          data-aos-anchor-placement="top-bottom"
+          >Your money goes straight to account provided</p>
+        </div>
+      </div>
+    </div>
+    <div
+     data-aos="fade-up"
+     data-aos-easing="ease-in"
+     data-aos-duration="700"
+     data-aos-anchor-placement="top-center"
+    className="right">
+      <img src={loanCardImage} alt="" />
+    </div>
+    </div>
+  </div>
+</section>
+<ScrollToTop />
     </div>
   );
 }

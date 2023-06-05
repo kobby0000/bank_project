@@ -15,7 +15,7 @@ function Header() {
   const {userInfo, setUserInfo } = useContext(userContext);
 
   useEffect(() => {
-    fetch("https://slick-union-bank.onrender.com/profile", {
+    fetch("https://calm-salmiakki-706c96.netlify.app/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -46,14 +46,20 @@ function Header() {
     <div>
       <nav id="header">
         <div className="header_wrapper container">
-          <div onClick={() => setToggle(!toggle)} className="left">
+          <div 
+          onClick={() => setToggle(false)} 
+          className="left"
+          >
             <Link to="/">
               <img className="header_logo" src={navLogo} alt="header logo" />
             </Link>
           </div>
           <div className="right">
             <ul className={toggle ? "nav_main toggle" : "nav_main"}>
-              <li onClick={() => setToggle(!toggle)} className="links">
+              <li 
+              onClick={() => setToggle(!toggle)} 
+              className="links"
+              >
                 <NavLink to="/">Home</NavLink>
               </li>
               <li onClick={() => setToggle(!toggle)}>
@@ -75,10 +81,16 @@ function Header() {
                 >
                   <ul className={isOpen ? "nav_sub slide" : "nav_sub"}>
                     <li>
-                      <Link to="/business">Business Banking</Link>
+                      <Link
+                      onClick={() => setToggle(!toggle)} 
+                       to="/business"
+                       >Business Banking</Link>
                     </li>
                     <li>
-                      <Link to="/personal">Personal Banking</Link>
+                      <Link 
+                      onClick={() => setToggle(!toggle)} 
+                       to="/personal"
+                       >Personal Banking</Link>
                     </li>
                   </ul>
                 </div>
@@ -102,32 +114,36 @@ function Header() {
                 >
                   <ul className={isOpenTwo ? "nav_sub slide" : "nav_sub"}>
                     <li className="head">Support Center</li>
-                    <li>
+                    <li onClick={() => setToggle(!toggle)} >
                       <Link to="/faq">FAQ</Link>
                     </li>
-                    <li>
+                    <li onClick={() => setToggle(!toggle)} >
                       <Link to="/complaint">Complaints</Link>
                     </li>
-                    <li>
+                    <li onClick={() => setToggle(!toggle)} >
                       <Link to="/contact_us">Contact Us</Link>
                     </li>
                   </ul>
                 </div>
               </li>
 
-              <li className="login_btn">
                 {username && (
-                  <>
+              <li 
+              onClick={() => setToggle(!toggle)} 
+              className="login_btn"
+              >
                     <Link to="/" onClick={logout}>Logout</Link>
-                  </>
+                </li>
                 )}
 
                 {!username && (
-                  <>
-                    <Link to="/login">Login</Link>
-                  </>
+                  <li 
+                  className="login_btn"
+                  >
+                    <Link to="/">Login</Link>
+                  </li>
                 )}
-              </li>
+
             </ul>
           </div>
           <div

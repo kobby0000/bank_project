@@ -1,0 +1,38 @@
+
+.contact_section {
+    position: relative;
+    isolation: isolate;
+    background: url("../../assets/images/woman-using-phone-car.jpg")no-repeat center center/cover;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.contact_section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(33, 120, 252, 0.4) 0%, rgba(25, 60, 114, 0.6) 46.53%);
+    z-index: -1;
+}
+
+.contact_section p {
+    color: #fff;
+}
+
+.contact_section p:first-child {
+    font-size: var(--head_font);
+    font-weight: 500;
+}
+
+.contact_section p:nth-child(2){
+    font-size: 1.2rem;
+}
+
+.contact_section .btn_main {
+    background: var(--primary_color);
+}

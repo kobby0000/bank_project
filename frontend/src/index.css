@@ -6,8 +6,9 @@
  --light_green: #9ED824;
  --transition: 400ms ease;
  --box_shadow:  0px 2px 3px 3px rgba(33, 120, 252, 0.1);
- --head_font: 3rem;
---primary_font: 1.2rem;
+ --head_font: 2.5rem;
+ --head_font2: 1.5rem;
+--primary_font: 1rem;
 }
 
 
@@ -44,7 +45,7 @@ img {
 }
 
 .container {
-  max-width: 93%;
+  max-width: 90%;
   margin: auto;
 }
 
@@ -79,7 +80,7 @@ img {
   border-radius: 5px;
   color: #fff;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   transition : all var(--transition);
   background: var(--dark_blue);
   width: fit-content;
@@ -104,5 +105,13 @@ img {
   border-radius: 5px;
   background: var(--primary_color);
   margin: auto;
+  margin-top: 5px;
+}
+
+.line_two {
+  width: 50px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--light_green);
   margin-top: 5px;
 }

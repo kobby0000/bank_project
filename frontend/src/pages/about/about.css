@@ -1,0 +1,347 @@
+#about_showcase .about_showcase_wrapper {
+    position: relative;
+    isolation: isolate;
+    background: url('../../assets/images/african-business-male-people-shaking-hands.jpg')no-repeat center center/cover;
+    min-height: 100vh;
+    border-radius: 0px 0px 0px 194px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about_showcase .about_showcase_wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(33, 120, 252, 0.4) 0%, rgba(33, 120, 252, 0.312614) 60.45%, rgba(33, 120, 252, 0.08) 100%);
+    border-radius: 0px 0px 0px 194px;
+    z-index: 0;
+}
+
+#about_showcase .about_showcase_wrapper h1 {
+    z-index: 1;
+    color: #fff;
+    font-size: var(--head_font);
+}
+
+
+/* ======= SECTION: ABOUT_HISTORY ======= */
+#about_history {
+    margin: 5rem 0;
+}
+
+#about_history .about_history_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#about_history .about_history_wrapper .left,
+#about_history .about_history_wrapper .right {
+    max-width: 50%;
+}
+
+#about_history .about_history_wrapper .left h2 {
+    padding: 1.5rem 0;
+    color: var(--primary_color);
+    font-size: var(--head_font2)
+}
+
+#about_history .about_history_wrapper .right img {
+    border-radius: 10px;
+}
+
+/* ======= SECTION: ABOUT_STATEMENT ======= */
+#about_statement {
+    margin-bottom: 5rem;
+}
+
+#about_statement .about_statement_wrapper .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+#about_statement .about_statement_wrapper .top .card {
+    max-width: 40%;
+    padding: 3rem 2rem;
+    border-bottom: 10px solid var(--dark_blue);
+    box-shadow: 2px 4px 4px rgba(33, 120, 252, 0.15);
+border-radius: 57px;
+}
+
+#about_statement .about_statement_wrapper .top .card:nth-child(2) {
+    margin-top: 10rem;
+}
+
+#about_statement .about_statement_wrapper .heading {
+    color: var(--primary_color);
+    font-weight: bold;
+    font-size: var(--head_font2);
+    margin-bottom: 1rem;
+}
+
+#about_statement .about_statement_wrapper .bottom {
+    max-width: 900px;
+    margin: 5rem auto;
+}
+
+/* ======= SECTION: ABOUT_CARDS ======= */
+
+.about_square_cards_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ======= SECTION : ABOUT_TEAM ======= */
+#about_team {
+    background: url('../../assets/images/15151445_5559852.jpg')no-repeat center center/cover;
+    padding: 5rem 0;
+}
+
+#about_team .about_team_wrapper .top {
+    margin-bottom: 1rem;
+}
+
+#about_team .about_team_wrapper .top p {
+    padding: 0.5rem;
+    color: #fff;
+}
+
+#about_team .about_team_wrapper .top p:first-child {
+    font-size: var(--head_font2);
+    font-weight: bold;
+}
+
+#about_team .about_team_wrapper .top p:first-child span {
+    color: var(--light_green);
+}
+
+#about_team .about_team_wrapper .top p:last-child {
+    font-size: 1.5rem;
+}
+
+#about_team .about_team_wrapper .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 10rem;
+}
+
+#about_team .about_team_wrapper .bottom .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 33.333%;
+}
+
+#about_team .about_team_wrapper .bottom .card .image_container {
+    position: absolute;
+    top: -100px;
+    z-index: 1;
+}
+
+#about_team .about_team_wrapper .bottom .card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 500px 500px 500px 0px;
+    
+}
+
+#about_team .about_team_wrapper .bottom .card .card_overlay::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    width: 220px;
+    height: 220px;
+    border-radius: 500px 500px 500px 0px;
+    background: var(--light_green);
+    z-index: -1;
+}
+
+#about_team .about_team_wrapper .bottom .card .details {
+    width: 260px;
+    min-height: 270px;
+    background: rgba(25, 60, 114, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 500px 500px 20px 20px;
+    background: rgba(122, 139, 236, 0.2);
+    backdrop-filter: blur(35px);
+    display: flex;
+    flex-direction: column;
+    padding: 9rem 1rem 1rem 1rem;
+}
+
+#about_team .about_team_wrapper .bottom .card .details p {
+    font-size: 1rem;
+    color: #ffffff;
+    padding-bottom: 0.5rem;
+}
+
+#about_team .about_team_wrapper .bottom .card .details .title {
+    font-weight: bold;
+}
+
+/* ======= SECTION: TESTIMONIALS ======= */
+#testimonials {
+    margin: 5rem 0;
+}
+
+#testimonials .testimonials_wrapper .top p {
+    padding: 0.5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+#testimonials .testimonials_wrapper .top p:nth-child(2) {
+    font-size: var(--head_font2);
+    color: var(--primary_color);
+}
+
+#testimonials .testimonials_wrapper .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+#testimonials .testimonials_wrapper .bottom .content {
+    position: relative;
+    background: var(--primary_color);
+    padding: 0  2rem;
+    border-radius: 0px 100px 0px 100px;
+    width: 350px;
+    border-left: 7px solid var(--grey_color);
+}
+
+#testimonials .testimonials_wrapper .bottom .content:nth-child(2) {
+    background: var(--grey_color);
+    border-left: 7px solid var(--primary_color);
+}
+
+#testimonials .testimonials_wrapper .bottom .content img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 0; 
+}
+
+#testimonials .testimonials_wrapper .bottom .content .details {
+    padding-bottom: 1rem;
+}
+
+#testimonials .testimonials_wrapper .bottom .content .details p {
+    color: #fff;
+}
+
+#testimonials .testimonials_wrapper .bottom .details .name {
+    font-weight: 500;
+    padding: 0.5rem 0 2rem 2rem;
+}
+
+#testimonials .testimonials_wrapper .bottom .details .message {
+    padding: 0rem 0rem 1rem 2rem;
+}
+
+
+
+                        /* ======= MEDIA QUERIES ======= */
+
+/* ======= MAX-WIDTH: 900px ======= */
+@media screen and (max-width: 900px) {
+    /* ======= SECTION: ABOUT_HISTORY ======= */
+
+#about_history .about_history_wrapper {
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#about_history .about_history_wrapper .left,
+#about_history .about_history_wrapper .right {
+    max-width: 100%;
+}
+
+/* ======= SECTION: ABOUT_STATEMENT ======= */
+#about_statement .about_statement_wrapper .top .card {
+    max-width: 100%;
+}
+
+}
+
+/* ======= MAX-WIDTH: 750px ======= */
+@media screen and (max-width: 750px) {
+/* ======= SECTION : ABOUT_TEAM ======= */
+#about_team .about_team_wrapper .bottom {
+    flex-direction: column;
+    gap: 10rem;
+    margin-top: 10rem;
+}
+
+#about_team .about_team_wrapper .bottom .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+}
+
+
+/* ======= MAX-WIDTH: 700px ======= */
+@media screen and (max-width: 700px) {
+   
+/* ======= SECTION: ABOUT_STATEMENT ======= */
+#about_statement {
+    margin-bottom: 5rem;
+}
+
+#about_statement .about_statement_wrapper .top {
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+#about_statement .about_statement_wrapper .top .card:nth-child(2) {
+    margin-top: 2rem;
+}
+
+/* ======= SECTION: TESTIMONIALS ======= */
+#testimonials .testimonials_wrapper .bottom {
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-direction: column;
+}
+
+#testimonials .testimonials_wrapper .bottom .content {
+    width: 80%;
+}
+}
+
+/* ======= MAX-WIDTH: 500px ======= */
+/* ======= SECTION: TESTIMONIALS ======= */
+@media screen and (max-width: 500px) {
+    #testimonials .testimonials_wrapper .bottom .content {
+        width: 100%;
+        padding-right: 1.5rem;
+    }
+
+    #testimonials .testimonials_wrapper .bottom .details .name {
+        font-weight: 500;
+        padding: 1rem 0 1.5rem 2rem;
+    }
+    
+    #testimonials .testimonials_wrapper .bottom {
+        gap: 4.5rem;
+    }
+}

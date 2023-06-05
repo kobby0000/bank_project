@@ -1,0 +1,156 @@
+#Personal_showcase .Personal_showcase_wrapper {
+  background: url("../../assets/images/business-team-planning-marketing-strategy.jpg")
+    no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Personal_showcase .Personal_showcase_wrapper h1 {
+  font-size: var(--head_font);
+  color: var(--dark_blue);
+}
+
+/* ======= SECTION : PERSONAL_WELCOME =======  */
+#Personal_welcome {
+  margin: 5rem 0;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .top p {
+  padding: 0.5rem;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .top p:first-child {
+  font-size: var(--head_font2);
+  color: var(--primary_color);
+}
+
+#Personal_welcome .Personal_welcome_wrapper .top p:nth-child(2) {
+  font-size: var(--head_font2);
+  color: var(--dark_blue);
+}
+
+#Personal_welcome .Personal_welcome_wrapper .top p:last-child {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .bottom {
+  background: url("../../assets//images/3386851.jpg") no-repeat center
+    center/cover;
+  margin: 5rem 0;
+  padding: 4rem 0;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .bottom_container {
+  max-width: 800px;
+  padding: 1rem;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .bottom .title {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .bottom .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .bottom .cards div {
+    width: 100%;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .bottom #card_two {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(25px);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 170px;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .bottom #card_two img {
+  width: 40px;
+}
+
+#Personal_welcome .Personal_welcome_wrapper .bottom #card_two p:nth-child(2) {
+  font-weight: bold;
+}
+
+/* ======= SECTION : PERSONAL_SAVE =======  */
+#personal_save {
+    margin-bottom: 5rem;
+}
+
+#personal_save .personal_save_wrapper .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#personal_save .personal_save_wrapper .top .left,
+#personal_save .personal_save_wrapper .top .right {
+    max-width: 50%;
+}
+
+#personal_save .personal_save_wrapper .top .left p:first-child {
+    font-size: var(--head_font2);
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+#personal_save .personal_save_wrapper .top .right img {
+    max-width: 350px;
+}
+
+
+/* ======= MEDIA QUERIES ======= */
+
+@media screen and (max-width: 900px) {
+  /* ======= SECTION : PERSONAL_WELCOME =======  */
+  #Personal_welcome .Personal_welcome_wrapper .bottom_container {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  #Personal_welcome .Personal_welcome_wrapper .bottom .cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+    /* ======= SECTION : PERSONAL_WELCOME =======  */
+    #Personal_welcome .Personal_welcome_wrapper .bottom_container {
+      max-width: 90%;
+      padding: 0rem;
+    }
+
+    /* ======= SECTION : PERSONAL_SAVE =======  */
+
+#personal_save .personal_save_wrapper .top {
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#personal_save .personal_save_wrapper .top .left,
+#personal_save .personal_save_wrapper .top .right {
+    max-width: 100%;
+}
+
+#personal_save .personal_save_wrapper .top .right img {
+    max-width: 100%;
+}
+
+}

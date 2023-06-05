@@ -24,6 +24,7 @@ import {
 //Layouts
 import RootLayout from "./Layouts/RootLayout";
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout/>}>
@@ -45,7 +46,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
-      
     </div>
   );
 }
