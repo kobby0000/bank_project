@@ -231,7 +231,7 @@ function Home() {
         <img src= {cardImg1} alt="" />
         <div className="text">
           <p>Paypal Scams</p>
-          <p>See our 2022 annual report and our Anniversary.</p>
+          <p>Be vigilant as people are scaming people o paypal services.</p>
           <a className="btn_2 text_center" href="/">Learn More</a>
         </div>
       </div>
