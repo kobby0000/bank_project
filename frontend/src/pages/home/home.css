@@ -55,7 +55,7 @@
   object-position: center center;
 }
 
-#home .home_showcase_wrapper .home_form {
+/* #home .home_showcase_wrapper .home_form {
   position: absolute;
   top: 30%;
   right: 7.5%;
@@ -94,7 +94,7 @@
 
 #home .home_form .home_form_button {
   background: var(--light_green);
-}
+} */
 
 /* SECTION: HOME_BOXES */
 #home_boxes .home_boxes_wrapper {

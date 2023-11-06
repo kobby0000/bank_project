@@ -1,6 +1,6 @@
-import React, { useContext, useEffect,useState} from "react";
+import { useEffect} from "react";
 import "./home.css";
-import { Link, Navigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Autoplay } from "swiper";
@@ -8,7 +8,7 @@ import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { userContext } from "../../context/userContext";
+// import { userContext } from "../../context/userContext";
 
 // images
 import slideImage1 from "../../assets/images/teenager-carrying-young-girl-outdoors.jpg";
@@ -34,36 +34,36 @@ import ScrollToTop from "../../components/scollToTop/ScrollToTop";
 
 
 function Home() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [redirect, setRedirect] = useState(false);
-  const {setUserInfo} = useContext(userContext);
+  // const [username, setUsername] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [redirect, setRedirect] = useState(false);
+  // const {setUserInfo} = useContext(userContext);
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  async function login(e) {
-    e.preventDefault();
-   const response = await fetch('https://slick-union-bank.onrender.com/login', {
-      method: "POST",
-      body: JSON.stringify({username,password}),
-      headers: {"Content-Type": "application/json"},
-      credentials: "include",
-    });
-    if (response.ok) {
-      response.json().then(userInfo => {
-        setUserInfo(userInfo);
-        setRedirect(true);
-      })
-    } else {
-      alert("wrong credentials");
-    }
-  }
+  // async function login(e) {
+  //   e.preventDefault();
+  //  const response = await fetch('https://slick-union-bank.onrender.com/login', {
+  //     method: "POST",
+  //     body: JSON.stringify({username,password}),
+  //     headers: {"Content-Type": "application/json"},
+  //     credentials: "include",
+  //   });
+  //   if (response.ok) {
+  //     response.json().then(userInfo => {
+  //       setUserInfo(userInfo);
+  //       setRedirect(true);
+  //     })
+  //   } else {
+  //     alert("wrong credentials");
+  //   }
+  // }
 
-  if (redirect) {
-    return <Navigate to={"/profile"} />
-  }
+  // if (redirect) {
+  //   return <Navigate to={"/profile"} />
+  // }
 
   return (
     <div>
@@ -115,7 +115,7 @@ function Home() {
               <div
                 className="left">
                   <p>CREDIT FREE LOAN</p>
-                  <p className="text">JOIN u</p>
+                  <p className="text">JOIN us for the best and amazig experience and grow you businessto any heeight with our professional stuff.</p>
                   <Link className="btn_main" to="/">Learn more</Link>
                   </div>
                   <div>
@@ -139,7 +139,7 @@ function Home() {
             </Swiper>
           </div>
 
-          <form onSubmit={login} className="home_form">
+          {/* <form onSubmit={login} className="home_form">
             <p>Account Login</p>
             <label>User ID</label>
             <input 
@@ -155,7 +155,7 @@ function Home() {
             />
             <Link to="/">Forgot Password?</Link>
             <button className="home_form_button btn">Login</button>
-          </form>
+          </form> */}
         </div>
       </section>
 

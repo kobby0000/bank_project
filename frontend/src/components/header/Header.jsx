@@ -132,7 +132,7 @@ function Header() {
               onClick={() => setToggle(!toggle)} 
               className="login_btn"
               >
-                    <Link to="/" onClick={logout}>Logout</Link>
+                    <Link to="/login" onClick={logout}>Logout</Link>
                 </li>
                 )}
 
@@ -141,7 +141,7 @@ function Header() {
                   onClick={() => setToggle(!toggle)} 
                   className="login_btn"
                   >
-                    <Link to="/">Login</Link>
+                    <Link to="/login">Login</Link>
                   </li>
                 )}
 
