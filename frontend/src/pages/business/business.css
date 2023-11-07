@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 0 0 0 15rem ;
 }
 
 #business_showcase .business_showcase_wrapper h1 {
