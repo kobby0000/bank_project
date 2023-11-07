@@ -16,6 +16,10 @@
     margin-bottom: 2rem;
 }
 
+#register .register_wrapper .top img {
+    width: 100px;
+}
+
 
 #register .register_wrapper .top .head {
     font-size: 2rem;

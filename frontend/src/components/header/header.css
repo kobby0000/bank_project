@@ -15,7 +15,7 @@
 
 #header .header_wrapper .left .header_logo {
   display: block;
-  width: 250px;
+  width: 210px;
   color: #fff;
 }
 
@@ -214,8 +214,9 @@
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 650px) {
   #header .header_wrapper .left .header_logo {
-    width: 170px;
+    width: 140px;
   }
 }
+

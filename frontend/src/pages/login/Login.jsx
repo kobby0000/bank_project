@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import "./login.css";
 import { Link, Navigate} from "react-router-dom";
 import { userContext } from "../../context/userContext";
+import ScrollToTop from '../../components/scollToTop/ScrollToTop';
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -50,6 +51,7 @@ function Login() {
             <Link to="/">Forgot Password?</Link>
             <button className="home_form_button btn">Login</button>
           </form> 
+          <ScrollToTop />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import logo from "../../assets/images/only_logo.png";
 import "./register.css";
+import ScrollToTop from '../../components/scollToTop/ScrollToTop';
 
 function Register() {
     const [username, setUsername] =useState ("");
@@ -8,7 +9,7 @@ function Register() {
 
    async function registrationForm (e){
         e.preventDefault();
-    const  response = await fetch('http://localhost:4000/register', {
+    const  response = await fetch('https://slick-union-bank.onrender.com/register', {
             method: "POST",
             body: JSON.stringify({username,password}),
             headers: {"Content-Type": "application/json"},
@@ -49,6 +50,7 @@ function Register() {
             </form>
         </div>
     </section>
+    <ScrollToTop />
     </>
   )
 }
