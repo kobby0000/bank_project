@@ -19,7 +19,8 @@ function Footer() {
               <ul>
                 <li>Menu</li>
                 <li><a className="footer_menu" href="/about">About Us</a></li>
-                <li><a className="footer_menu" href="/complaints">Complaint</a></li>
+                <li><a className="footer_menu" href="/personal">Personal Banking</a></li>
+                <li><a className="footer_menu" href="/business">Busuness Banking</a></li>
                 <li><a className="footer_menu" href="/faq">FAQ</a></li>
                 <li><a className="footer_menu" href="/contact_us">Contact Us</a></li>
               </ul>

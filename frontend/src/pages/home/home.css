@@ -338,10 +338,6 @@
     right: 10%;
     width: 300px;
   }
-
-  #home .home_swiper_background .swiper .left {
-    display: none;
-  }
 }
 
 /* ======= MAX-WIDTH: 800PX ======= */

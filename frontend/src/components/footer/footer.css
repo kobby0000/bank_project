@@ -22,7 +22,7 @@
 }
 
 .footer_wrapper .top .left img {
-    width: 270px;
+    width: 230px;
 }
 
 .footer_wrapper .top .left p {
@@ -42,7 +42,7 @@
 
 .footer_wrapper .middle ul li {
     list-style: none;
-    margin-bottom: 1rem;
+    margin-bottom: 0.65rem;
 }
 
 .footer_wrapper .middle ul li a{
@@ -103,7 +103,12 @@
     font-size: 1rem;
 }
 
+.footer_wrapper .bottom .main .left p {
+    font-size: 0.9rem;
+}
+
 .footer_wrapper .bottom .main .right a{
+    font-size: 0.9rem;
     color: #fff;
     margin-right: 0.75rem;
 }
