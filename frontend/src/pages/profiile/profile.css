@@ -1,0 +1,166 @@
+#profile {
+  min-height: 100vh;
+  padding-top: 5rem;
+  background: rgb(1, 14, 37);
+}
+
+.profile-header {
+  background-color: #2e87e3;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.customer-name {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.account-type {
+  font-size: 16px;
+}
+
+.profile-info {
+  background-color: #fff;
+  margin-top: 2rem;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 1rem;
+}
+
+.profile-info .intro {
+    padding-left: 1rem;
+}
+
+.profile-info .intro h2 {
+  color: var(--dark_blue);
+  margin-bottom: 1rem;
+}
+
+.profile-info .intro p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.profile-info .top {
+  background: var(--dark_blue);
+  border-radius: 7px;
+}
+
+.profile-info .top,
+.profile-info .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  font-size: 16px;
+}
+
+.profile-info .top .info-section .name p {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* .info-section {
+  margin-bottom: 20px;
+  background: var(--dark_blue);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.action-button {
+  background-color: #2e87e3;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+} */
+.info-section {
+    margin-bottom: 20px;
+    background: var(--dark_blue);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.bottom .info-section .action-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+      /* justify-content: flex-start;
+      align-items: flex-start; */
+      /* border: 1px solid red; */
+  }
+  
+  .action-button {
+    background-color: #2e87e3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    /* margin: 5px; */
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .bottom .info-section .content {
+    position: absolute;
+    /* top: 5rem; */
+  }
+
+.message-notification {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.message-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+
+.transfer-form {
+    position: fixed;
+    top: 10rem;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    transition: right 0.3s ease-in-out;
+    color: #000;
+  }
+  
+  .transfer-form.open {
+    right: 0;
+  }
+  
+  .form-content {
+    padding: 20px;
+  }
+  
+  .form-content h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
