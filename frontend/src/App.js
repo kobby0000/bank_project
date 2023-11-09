@@ -19,6 +19,8 @@ import {
   Login,
   Register,
   Profile,
+  AnnualReport,
+  PaypalScam
 } from "./pages/Index";
 
 //Layouts
@@ -38,6 +40,8 @@ const router = createBrowserRouter(
       <Route path="/login" element= {<Login />} />
       <Route path="/register" element= {<Register />} />
       <Route path="/profile" element= {<Profile />} />
+      <Route path="/annual-report" element= {<AnnualReport />} />
+      <Route path="/paypal-scam" element= {<PaypalScam />} />
     </Route>
   )
 );

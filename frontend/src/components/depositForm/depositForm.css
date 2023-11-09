@@ -1,0 +1,23 @@
+.transfer-form {
+    position: fixed;
+    top: 10rem;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    transition: right 0.3s ease-in-out;
+    color: #000;
+  }
+  
+  .transfer-form.open {
+    right: 0;
+  }
+  
+  .form-content {
+    padding: 20px;
+  }
+  
+  .form-content h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }

@@ -27,6 +27,8 @@ import chartIcon from "../../assets/images/chart.png";
 import tombIcon from "../../assets/images/tomb.png";
 import fundsIcon from "../../assets/images/funds.png";
 import loanCardImage from "../../assets/images/loan_card.png";
+import annualReport from "../../assets/images/annual-report.jpg";
+import scamAlert from "../../assets/images/scam-alert.jpg";
 
 import SquareCard from "../../components/squareCard/SquareCard";
 import CardTwo from "../../components/cardTwo/CardTwo";
@@ -215,11 +217,11 @@ function Home() {
        data-aos-duration="700"
       className="card"
       >
-        <img src={cardImg1} alt="" />
+        <img src={annualReport} alt="" />
         <div className="text">
           <p>Annual Report</p>
           <p>See our 2022 annual report and our Anniversary.</p>
-          <a className="btn_2 text_center" href="/">Learn More</a>
+          <a className="btn_2 text_center" href="/annual-report">Learn More</a>
         </div>
       </div>
       <div 
@@ -228,11 +230,11 @@ function Home() {
       data-aos-duration="900"
       className="card"
       >
-        <img src= {cardImg1} alt="" />
+        <img src= {scamAlert} alt="" />
         <div className="text">
           <p>Paypal Scams</p>
-          <p>Be vigilant as people are scaming people o paypal services.</p>
-          <a className="btn_2 text_center" href="/">Learn More</a>
+          <p>Be vigilant as people are scaming people of paypal services.</p>
+          <a className="btn_2 text_center" href="/paypal-scam">Learn More</a>
         </div>
       </div>
       <div 
@@ -245,7 +247,7 @@ function Home() {
         <div className="text">
           <p>Vision,  Mission, Core Values</p>
           <p>See our 2022 annual report and our Anniversary.</p>
-          <a className="btn_2 text_center" href="/">Learn More</a>
+          <a className="btn_2 text_center" href="/about">Learn More</a>
         </div>
       </div>
     </div>
