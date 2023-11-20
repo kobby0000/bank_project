@@ -11,7 +11,7 @@ function Header() {
   const [isOpenTwo, setIsOpenTwo] = useState(false);
   const bankRef = useRef();
   const personalRef = useRef();
-  // const [username, setUsername] = useState(ull);
+  // const [username, setUsername] = useState(null);
   const {userInfo, setUserInfo } = useContext(userContext);
 
   useEffect(() => {
