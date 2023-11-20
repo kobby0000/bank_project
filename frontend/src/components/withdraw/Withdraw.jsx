@@ -1,10 +1,10 @@
 import React from 'react';
-import "./depositForm.css";
+import "./withdraw.css";
 
-function DepositForm() {
+function Withdraw() {
   return (
     <div className="deposit-form-container">
-    <h2 className="form-title">Deposits</h2>
+    <h2 className="form-title">Withdrawals</h2>
     <div className="bottom">
     <div className='deposit'>
       <p className="date">Date</p>
@@ -12,19 +12,23 @@ function DepositForm() {
     </div>
     <div className='deposit'>
       <p className="date">02/03/2023</p>
-      <p className="amount">$3000</p>
+      <p className="amount">$700</p>
     </div>
     <div className='deposit'>
       <p className="date">02/03/2023</p>
-      <p className="amount">$3000</p>
+      <p className="amount">$1750</p>
     </div>
     <div className='deposit'>
       <p className="date">02/03/2023</p>
-      <p className="amount">$3000</p>
+      <p className="amount">$2000</p>
+    </div>
+    <div className='deposit'>
+      <p className="date">02/03/2023</p>
+      <p className="amount">$300</p>
     </div>
     </div>
   </div>
   )
 }
 
-export default DepositForm
+export default Withdraw

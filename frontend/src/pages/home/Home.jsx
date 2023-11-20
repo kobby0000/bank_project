@@ -117,7 +117,7 @@ function Home() {
               <div
                 className="left">
                   <p>CREDIT FREE LOAN</p>
-                  <p className="text">JOIN us for the best and amazig experience and grow you businessto any heeight with our professional stuff.</p>
+                  <p className="text">JOIN us for the best and amazig experience and grow you business to any heeight with our professional stuff.</p>
                   <Link className="btn_main" to="/">Learn more</Link>
                   </div>
                   <div>
