@@ -24,7 +24,7 @@ function Profile() {
           {/* <p>Accounts</p> */}
         </div>
         <div className="top">
-          <div className="info-section">
+          {/* <div className="info-section">
             <h2>Contact Information</h2>
             <p>
               <span className="bolder">Email:</span> johndoe@email.com
@@ -32,7 +32,7 @@ function Profile() {
             <p>
               <span className="bolder">Phone: </span> (123) 456-7890
             </p>
-          </div>
+          </div> */}
           <div className="info-section">
             <h2>Account Details</h2>
             <div class="card">
