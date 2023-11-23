@@ -402,6 +402,7 @@
 
   .bottom .info-section .btn-container:nth-child(1) .content {
     left: -1rem;
+    top: -17rem;
   }
 
   .bottom .info-section .btn-container:nth-child(2) .content {
