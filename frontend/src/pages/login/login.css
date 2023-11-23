@@ -4,9 +4,10 @@
     align-items: center;
     justify-content: center;
     /* margin-top: 2rem; */
-}
-
-.home_form {
+  }
+  
+  .home_form {
+  width: 300px;
     /* position: absolute; */
     margin-top: 3rem ;
     top: 30%;
@@ -17,7 +18,6 @@
     justify-content: center;
     gap: 1rem;
     background: var(--primary_color);
-    width: 250px;
     min-height: 400px;
     padding: 2rem;
     border-radius: 10px;
