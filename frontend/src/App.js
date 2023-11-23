@@ -25,11 +25,14 @@ import {
 
 //Layouts
 import RootLayout from "./Layouts/RootLayout";
+import ProfileLayout from "./Layouts/ProfileLayout";
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout/>}>
+    <Route path="/" >
+      <Route element={<RootLayout/>}>
+
       <Route index element= {<Home />} />
       <Route path="/about" element= {<About />} />
       <Route path="/business" element= {<Business />} />
@@ -39,9 +42,12 @@ const router = createBrowserRouter(
       <Route path="/contact_us" element= {<Contact />} />
       <Route path="/login" element= {<Login />} />
       <Route path="/register" element= {<Register />} />
-      <Route path="/profile" element= {<Profile />} />
       <Route path="/annual-report" element= {<AnnualReport />} />
       <Route path="/paypal-scam" element= {<PaypalScam />} />
+      </Route>
+      <Route element={<ProfileLayout />}>
+      <Route path="/profile" element= {<Profile />} />
+      </Route>
     </Route>
   )
 );
