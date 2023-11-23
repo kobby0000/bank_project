@@ -1,0 +1,72 @@
+.message-notification {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #fff;
+    padding: 0.8rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.message-notification .message-text {
+    width: 100%;
+}
+
+.message-notification .message-text .text-top {
+    margin-bottom: 5px;
+}
+
+.message-notification .message-text .text-top,
+.message-notification .message-text .text-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .message-notification .message-text .text-top h3 {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+  
+  .message-notification .message-text .money,
+  .message-notification .message-text .date,
+  .message-notification .message-text .time {
+    font-size: 13.5px;
+  }
+
+  .message-icon {
+    color: var(--light_green);
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  .message-icon img {
+    width: 40px;
+  }
+
+ .notification-detail p{
+   background: #fff;
+   width: 300px;
+    font-size: 0.99rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    box-shadow:inset 0 0 10px 1px rgba(0, 0, 0, 0.15);
+  }
+
+  .notification-detail {
+    height: 0px;
+    overflow: hidden;
+    transition:height 400ms ease-in-out;
+  }
+
+  /* .notification-detail.show {
+    height: 40px;
+  } */
+
+  @media screen and (max-width:420px) {
+    .message-notification {
+        max-width: 350px !important;
+    }
+  }

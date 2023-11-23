@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import "./transferForm.css";
 
 export default function TransferForm() {
-  const [amount, setAmount] = useState("");
-  const [fromAccount, setFromAccount] = useState("Savings");
-  const [toAccount, setToAccount] = useState("Checking");
+  // const [amount, setAmount] = useState("");
+  // const [fromAccount, setFromAccount] = useState("Savings");
+  // const [toAccount, setToAccount] = useState("Checking");
 
-  const handleTransfer = () => {
-    // Implement your transfer logic here
-    console.log(`Transfer ${amount} from ${fromAccount} to ${toAccount}`);
-    // Reset the form
-    setAmount("");
-    setFromAccount("Savings");
-    setToAccount("Checking");
-  };
+  // const handleTransfer = () => {
+  //   console.log(`Transfer ${amount} from ${fromAccount} to ${toAccount}`);
+  //   setAmount("");
+  //   setFromAccount("Savings");
+  //   setToAccount("Checking");
+  // };
   return (
     <div>
       <div className="transfer-container">
@@ -23,24 +21,24 @@ export default function TransferForm() {
            Full Name:
             <input
               type="text"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              // value={amount}
+              // onChange={(e) => setAmount(e.target.value)}
             />
           </label>
           <label>
             Account Number:
             <input
               type="number"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              // value={amount}
+              // onChange={(e) => setAmount(e.target.value)}
             />
           </label>
           <label>
             Routing Number:
             <input
               type="number"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              // value={amount}
+              // onChange={(e) => setAmount(e.target.value)}
             />
           </label>
 
@@ -48,8 +46,8 @@ export default function TransferForm() {
             Amount:
             <input
               type="number"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              // value={amount}
+              // onChange={(e) => setAmount(e.target.value)}
             />
           </label>
           {/* <label>
@@ -72,7 +70,9 @@ export default function TransferForm() {
               <option value="Checking">Checking</option>
             </select>
           </label> */}
-          <button onClick={handleTransfer}>Transfer</button>
+          <button 
+          // onClick={handleTransfer}
+          >Transfer</button>
         </form>
       </div>
     </div>

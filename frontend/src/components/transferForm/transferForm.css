@@ -5,13 +5,20 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: #110b0b;
+    background: #455;
     position: absolute;
     top: -12rem;
+  }
+
+  .transfer-container h1 {
+    font-size: 2rem;
+    color: #f4f4f4;
+    margin-bottom: 1rem;
   }
   
   .transfer-container label {
     display: block;
+    padding: 1px;
     margin-bottom: 10px;
   }
   
@@ -20,6 +27,18 @@
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
+    margin-top: 2px;
+    outline: 0;
+    border: 0;
+    border-radius: 7px;
+    height: 45px;
+  }
+
+  .transfer-container input:hover,
+  .transfer-container input:focus,
+  .transfer-container select:hover,
+  .transfer-container select:focus {
+    border: 1px solid var(--dark_blue);
   }
   
   .transfer-container button {
